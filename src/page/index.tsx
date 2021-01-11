@@ -19,9 +19,9 @@ export function Page() {
             paths: [item.href],
             component: () => {
                 return (
-                    <Layout activeIndex={index}>
-                        {PageComponent && <PageComponent></PageComponent>}
-                    </Layout>
+                    // <Layout activeIndex={index}>
+                    PageComponent && <PageComponent></PageComponent>
+                    // </Layout>
                 );
             }
         };
@@ -29,12 +29,14 @@ export function Page() {
 
     return (
         <SpinnerBox cover={loading}>
-            <CellRouter
-                // className="container"
-                style={{ minHeight: '60vh' }}
-                history={history}
-                routes={Routers}
-            />
+            <Layout activeIndex={0}>
+                <CellRouter
+                    // className="container"
+                    style={{ minHeight: '60vh' }}
+                    history={history}
+                    routes={Routers}
+                />
+            </Layout>
         </SpinnerBox>
     );
 }
