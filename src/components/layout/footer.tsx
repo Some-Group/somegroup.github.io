@@ -10,7 +10,7 @@ import { createCell } from 'web-cell';
 export function Footer() {
     return (
         <footer className="text-right bg-light py-2 px-2 fixed-bottom">
-            Proudly developed with
+            自豪的使用
             <a className="mx-2" target="_blank" href="https://web-cell.dev/">
                 WebCell v2
             </a>
@@ -22,7 +22,7 @@ export function Footer() {
             >
                 BootCell v1
             </a>
-            &copy;
+            构建 &copy;
             <a className="mx-2" target="_blank" href="https://somegroup.dev/">
                 SomeGroup.Dev
             </a>

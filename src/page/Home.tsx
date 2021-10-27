@@ -5,18 +5,11 @@
  * @Last Modified time: 2021-01-11 16:30:43
  */
 
-// eslint-disable-next-line no-unused-vars
 import { createCell, Fragment } from 'web-cell';
-// import { Progress } from 'boot-cell/source/Reminder/Progress';
 
 export default function Home() {
     return (
-        <>
-            {/* <div className="jumbotron">
-                <h1 className="display-3">Some Group</h1>
-                <p className="lead">This is a new beginning.</p>
-                <Progress status="success" percent={10} />
-            </div> */}
+        <Fragment>
             <div
                 style={{
                     display: 'flex',
@@ -26,8 +19,11 @@ export default function Home() {
                     height: 'calc(100vh - 120px)'
                 }}
             >
-                <h1 className="display-3 text-center my-10">Comming soon!</h1>
+                <h1 className="display-3 text-center my-10">
+                    因为热爱，让我们汇聚于此.
+                </h1>
+                <h2 className="text-right">学习、分享、进步</h2>
             </div>
-        </>
+        </Fragment>
     );
 }

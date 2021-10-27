@@ -8,20 +8,17 @@ import { routes } from '../routes';
 
 import { Layout } from '../components/layout';
 
-// import { Hello } from './Hello';
-// import { CellClock } from './Clock';
-
 export function Page() {
     const loading = false;
     const Routers = routes.map((item, index) => {
         const PageComponent = item.component ? item.component() : null;
         return {
-            paths: [item.href],
+            paths: item.href === 'welcome' ? [item.href, ''] : [item.href],
             component: () => {
                 return (
-                    // <Layout activeIndex={index}>
-                    PageComponent && <PageComponent></PageComponent>
-                    // </Layout>
+                    <Layout activeIndex={index}>
+                        {PageComponent && <PageComponent></PageComponent>}
+                    </Layout>
                 );
             }
         };
@@ -29,14 +26,12 @@ export function Page() {
 
     return (
         <SpinnerBox cover={loading}>
-            <Layout activeIndex={0}>
-                <CellRouter
-                    // className="container"
-                    style={{ minHeight: '60vh' }}
-                    history={history}
-                    routes={Routers}
-                />
-            </Layout>
+            <CellRouter
+                className="container"
+                style={{ minHeight: '60vh' }}
+                history={history}
+                routes={Routers}
+            />
         </SpinnerBox>
     );
 }

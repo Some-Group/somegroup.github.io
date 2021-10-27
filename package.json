@@ -17,11 +17,11 @@
     },
     "main": "src/index.html",
     "dependencies": {
-        "boot-cell": "^1.9.2",
+        "boot-cell": "^1.9.5",
         "browser-unhandled-rejection": "^1.0.2",
         "cell-router": "^2.0.4",
         "classnames": "^2.2.6",
-        "web-cell": "^2.3.0-beta.6",
+        "web-cell": "^2.3.0",
         "web-utility": "^2.4.1"
     },
     "devDependencies": {
